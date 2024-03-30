@@ -18,7 +18,7 @@ type DatabaseConfig struct {
 }
 
 type Settings struct {
-	Port string         `yaml:"post"`
+	Port string         `yaml:"port"`
 	DB   DatabaseConfig `yaml:"database"`
 }
 

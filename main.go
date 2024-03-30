@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"github.com/RudysAcosta/max-inventary/settings"
+	"go.uber.org/fx"
+)
 
 func main() {
-	fmt.Println("Hello mi")
+
+	app := fx.New(
+		fx.Provide(
+			settings.New,
+		),
+		fx.Invoke(),
+	)
+
+	app.Run()
+
 }
